@@ -162,50 +162,86 @@
 </head>
 <body>
 
-    <header class="header" id="page-header">
-        <nav class="navbar navbar-default" style="background: transparent; border: none; margin-bottom: 0;">
-            <div class="mini-nav">
-                <div class="container">
-                    <a class="pull-left btn-mini-app" href="#"><i class="fa fa-mobile"></i> Download App via SMS</a>
-                    <ul class="pull-right signin">
-                        <li><a href="#"><span>اردو</span></a></li>
-                        <li><a href="#">Sign Up</a></li>
-                        <li><a href="#">Sign In</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="main-nav">
-                <div class="container">
-                    <div class="navbar-header">
-                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse" aria-expanded="false">
-                            <span class="sr-only">Toggle navigation</span>
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                        </button>
-                        <a class="navbar-brand logo-white" href="#"><img src="https://wsa1.pakwheels.com/assets/new-pw-logo-white-618259573a0604d3ae593b46213e2ab390bcc33336d4bdc3486405c7351ded13.svg" alt="PakWheels"></a>
-                        <a class="navbar-brand logo-blue" href="#"><img src="https://wsa2.pakwheels.com/assets/new-pw-logo-10d6f88bb461a60e2a224d2b5068e8ea33111c8136bf7654f5ae9303fa99bb28.svg" alt="PakWheels"></a>
-                    </div>
-                    <div class="collapse navbar-collapse" id="navbar-collapse">
-                        <ul class="nav navbar-nav navbar-right">
-                            <li class="dropdown">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Used Cars <i class="fa fa-caret-down"></i></a>
-                                <div class="dropdown-menu mega-navbar columns-4">
-                                   <!-- ... Mega menu content from previous example ... -->
-                                </div>
-                            </li>
-                            <li><a href="#">New Cars</a></li>
-                            <li><a href="#">Bikes</a></li>
-                            <li><a href="#">Auto Store</a></li>
-                            <li><a href="#">Videos</a></li>
-                            <li><a href="#">Blog</a></li>
-                            <li class="post-an-ads"><a href="#">Post an Ad</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </nav>
-    </header>
+    <header class="header" id="page-header"><header class="header" id="page-header">
+  <nav class="navbar navbar-default" style="background: transparent; border: none; margin-bottom: 0;">
+    
+    <!-- Mini Nav -->
+    <div class="mini-nav">
+      <div class="container">
+        <a class="pull-left btn-mini-app" href="#"><i class="fa fa-mobile"></i> Download App via SMS</a>
+        <ul class="pull-right signin">
+          <li><a href="#"><span>اردو</span></a></li>
+          <li><a href="#">Sign Up</a></li>
+          <li><a href="#">Sign In</a></li>
+        </ul>
+      </div>
+    </div>
+    
+    <!-- Main Nav -->
+    <div class="main-nav">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand logo-white" href="#">
+            <img src="https://wsa1.pakwheels.com/assets/new-pw-logo-white-618259573a0604d3ae593b46213e2ab390bcc33336d4bdc3486405c7351ded13.svg" alt="PakWheels">
+          </a>
+          <a class="navbar-brand logo-blue" href="#">
+            <img src="https://wsa2.pakwheels.com/assets/new-pw-logo-10d6f88bb461a60e2a224d2b5068e8ea33111c8136bf7654f5ae9303fa99bb28.svg" alt="PakWheels">
+          </a>
+        </div>
+
+        <!-- Navigation Menu -->
+        <div class="collapse navbar-collapse" id="navbar-collapse">
+          <ul class="nav navbar-nav navbar-right">
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Used Cars <i class="fa fa-caret-down"></i></a>
+              <div class="dropdown-menu mega-navbar columns-4">
+                <ul class="list-unstyled">
+                  <li>
+                    <a href="#"><i class="fa fa-car"></i>
+                      <div>Find Used Cars</div>
+                      <p>Thousands of listings</p>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#"><i class="fa fa-star"></i>
+                      <div>Featured Cars</div>
+                      <p>Top quality vehicles</p>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#"><i class="fa fa-search"></i>
+                      <div>Car Inspection</div>
+                      <p>Get expert reviews</p>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#"><i class="fa fa-money"></i>
+                      <div>Car Finance</div>
+                      <p>Flexible plans</p>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li><a href="#">New Cars</a></li>
+            <li><a href="#">Bikes</a></li>
+            <li><a href="#">Auto Store</a></li>
+            <li><a href="#">Videos</a></li>
+            <li><a href="#">Blog</a></li>
+            <li class="post-an-ads"><a href="#">Post an Ad</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+
 
     <main>
         <section class="search-classified-bg">
@@ -492,5 +528,28 @@
             });
         });
     </script>
+
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+<script>
+  $(window).on("scroll", function () {
+    if ($(this).scrollTop() > 50) {
+      $("#page-header").addClass("scrolled");
+    } else {
+      $("#page-header").removeClass("scrolled");
+    }
+  });
+
+  $(".dropdown").hover(
+    function () {
+      $(this).find(".dropdown-menu").stop(true, true).fadeIn(200);
+    },
+    function () {
+      $(this).find(".dropdown-menu").stop(true, true).fadeOut(200);
+    }
+  );
+</script>
+
 </body>
 </html>
