@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PakWheels Clone - Full Homepage (Responsive)</title>
+    <title>PakWheels Clone - Full Homepage</title>
 
     <!-- External Libraries -->
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" rel="stylesheet">
@@ -17,16 +17,12 @@
         body {
             font-family: 'Lato', sans-serif;
             background-color: #f9f9f9;
-            overflow-x: hidden;
         }
         .container { max-width: 1170px; }
         h2 { font-weight: 700; color: #373737; margin-bottom: 20px; font-size: 24px; }
         section { padding: 30px 0; }
-        .section-heading-container { display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px; }
-        .section-heading-container h2 { margin: 0; }
-        .section-heading-container .more-link { color: #1877f2; font-weight: bold; text-decoration: none; }
 
-        /* --- Header Styles --- */
+        /* --- Header & Nav Styles --- */
         #page-header { position: fixed; top: 0; left: 0; width: 100%; z-index: 1000; background-color: transparent; transition: background-color 0.3s ease, box-shadow 0.3s ease; }
         .mini-nav { background-color: rgba(242, 242, 242, 0.9); padding: 5px 15px; font-size: 12px; border-bottom: 1px solid rgba(224, 224, 224, 0.5); transition: all 0.3s ease; }
         .mini-nav a { color: #373737; text-decoration: none; }
@@ -34,6 +30,7 @@
         .mini-nav .fa-mobile { font-size: 16px; margin-right: 5px; }
         .mini-nav .signin { list-style: none; margin: 0; padding: 0; }
         .mini-nav .signin li { display: inline-block; margin-left: 15px; }
+        .mini-nav .signin a:hover { text-decoration: underline; }
         .main-nav { padding: 15px 0; transition: padding 0.3s ease; }
         .main-nav .navbar-brand img { height: 40px; transition: height 0.3s ease; }
         .navbar-nav > li > a { color: white; font-weight: bold; font-size: 15px; padding: 15px; text-transform: uppercase; transition: color 0.3s ease; }
@@ -44,7 +41,7 @@
         .mega-navbar li a { display: flex; align-items: center; padding: 10px 15px; color: #373737; text-decoration: none; border-radius: 4px; }
         .mega-navbar li a:hover { background-color: #f5f5f5; }
         .mega-navbar li a .fa { margin-right: 15px; font-size: 20px; color: #e61e2b; width: 25px; text-align: center; flex-shrink: 0; }
-        .mega-navbar li a strong { display: block; color: #373737; font-weight: bold; }
+        .mega-navbar li a div, .mega-navbar li a strong { display: block; color: #373737; font-weight: bold; }
         .mega-navbar li a p { margin: 0; font-size: 12px; color: #888; font-weight: normal;}
         .post-an-ads a { border: 2px solid white; color: white !important; border-radius: 5px; padding: 8px 15px !important; margin-top: 5px; transition: all 0.3s ease; }
         #page-header.scrolled { background-color: white; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
@@ -57,9 +54,9 @@
         #page-header.scrolled .navbar-nav > li > a { color: #373737; }
         #page-header.scrolled .post-an-ads a { border-color: #e61e2b; color: #e61e2b !important; }
         #page-header.scrolled .post-an-ads a:hover { background-color: #e61e2b; color: white !important; }
-        .header-space { height: 86px; }
+        .header-space { height: 94px; }
         
-        /* Hero Section */
+        /* --- Hero Section Styles --- */
         .search-classified-bg { background: url('https://cache1.pakwheels.com/system/super_boards/background_images/000/000/008/original/8.jpg?1729889225') no-repeat center center; background-size: cover; padding: 120px 0 80px; position: relative; color: white; text-align: center; }
         .search-classified-bg::before { content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.4); }
         .search-classified-text, .search-classified { position: relative; z-index: 2; }
@@ -80,110 +77,92 @@
         #home-search-btn { background-color: #28a745; border: none; width: 60px; height: 50px; font-size: 20px; }
         .btn-classified-container { margin-top: 20px; }
         .btn-link-outline { color: white; border: 1px solid white; padding: 8px 15px; border-radius: 20px; text-decoration: none; display: inline-block; transition: all 0.2s; }
-        .btn-link-outline:hover { background-color: white; color: #373737; }
+        .btn-link-outline:hover { background-color: white; color: #373737; text-decoration: none; }
 
-        /* Sections Below Hero */
+        /* --- Sections Below Hero --- */
         .home-widgets { background: white; border-radius: 8px; padding: 30px; margin-top: 20px; }
         .home-widgets-title { text-align: center; margin-bottom: 30px; }
-        .home-widgets .col-md-6.line { position: relative; }
-        .home-widgets .col-md-6.line.or::after { content: "OR"; position: absolute; right: -15px; top: 50%; transform: translateY(-50%); background-color: #f2f2f2; color: #999; width: 30px; height: 30px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; z-index: 1; }
+        .home-widgets .col-md-6.line { position: relative; border-right: 1px solid #e0e0e0; }
+        .home-widgets .col-md-6.line.or::after { content: "OR"; position: absolute; right: -15px; top: 50%; transform: translateY(-50%); background-color: #f2f2f2; color: #999; width: 30px; height: 30px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; }
         .home-widgets h2 { font-size: 22px; font-weight: 700; margin-top: 0; }
         .home-widgets ul { list-style: none; padding-left: 0; margin-top: 20px; }
         .home-widgets li { margin-bottom: 10px; font-size: 16px; display: flex; align-items: center; }
         .fa-tick::before { content: "\f00c"; font-family: FontAwesome; color: #28a745; margin-right: 10px; }
         .home-widgets .btn { border-radius: 5px; font-weight: bold; padding: 12px 30px; margin-top: 10px; }
         .main-google-ad-container { padding: 30px 0; text-align: center; }
-        .top_banner { max-width: 970px; height: 250px; background-color: #f0f0f0; margin: auto; display: flex; align-items: center; justify-content: center; color: #ccc; font-size: 20px; }
+        .top_banner { width: 970px; height: 250px; background-color: #f0f0f0; margin: auto; display: flex; align-items: center; justify-content: center; color: #ccc; font-size: 20px; }
         
+        /* Browse Section */
         .nav-tabs-main .nav-tabs { border-bottom: 2px solid #ddd; }
         .nav-tabs-main .nav-tabs > li > a { border: none; border-bottom: 2px solid transparent; color: #555; font-weight: bold; font-size: 16px; }
-        .nav-tabs-main .nav-tabs > li.active > a, .nav-tabs-main .nav-tabs > li > a:hover { color: #e61e2b; background-color: transparent; border-color: transparent; border-bottom: 2px solid #e61e2b; }
+        .nav-tabs-main .nav-tabs > li.active > a, .nav-tabs-main .nav-tabs > li > a:hover { color: #e61e2b; background-color: transparent; border: none; border-bottom: 2px solid #e61e2b; }
         .browse-listing { display: flex; flex-wrap: wrap; list-style: none; padding: 0; }
         .browse-listing li { padding: 10px; min-height: 140px; display: flex; }
         .browse-listing a { display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; color: #373737; font-weight: bold; text-decoration: none; padding: 15px; border: 1px solid #e0e0e0; border-radius: 8px; transition: all 0.2s ease; width: 100%; height: 100%; }
         .browse-listing a:hover { box-shadow: 0 4px 15px rgba(0,0,0,0.1); transform: translateY(-3px); text-decoration: none; }
-        .browse-listing img { margin-bottom: 10px; height: 50px; object-fit: contain; }
+        .browse-listing img { margin-bottom: 10px; height: 50px; }
         .carousel-control { background-image: none !important; opacity: 1; width: 30px; }
         .carousel-control .fa { position: absolute; top: 50%; z-index: 5; display: inline-block; margin-top: -15px; font-size: 24px; color: #999; background: #fff; border-radius: 50%; width: 30px; height: 30px; line-height: 30px; box-shadow: 0 1px 3px rgba(0,0,0,.2); }
         .carousel-control.left { left: -15px; }
         .carousel-control.right { right: -15px; }
         
+        /* Cards styling for featured sections */
         .cards { background: #fff; border: 1px solid #e0e0e0; border-radius: 8px; overflow: hidden; margin-bottom: 20px; transition: all 0.3s ease; position: relative; }
         .cards:hover { box-shadow: 0 5px 15px rgba(0,0,0,0.1); }
         .cards .img-box { height: 150px; background: #f0f0f0; display: flex; align-items: center; justify-content: center; overflow: hidden; }
         .cards .img-box img { width: 100%; height: 100%; object-fit: cover; }
         .cards-content { padding: 15px; }
         .cards-content h3 { font-size: 16px; font-weight: bold; margin: 0 0 5px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
-        .cards-content a { color: #373737; text-decoration: none; }
-        .cards-content a:hover { color: #e61e2b; }
         .cards-content .generic-green { color: #28a745; font-weight: bold; }
         .cards-content .generic-gray { color: #888; font-size: 14px; }
         .featured-ribbon { position: absolute; top: 10px; left: 10px; background-color: #ffc107; color: white; padding: 3px 8px; font-size: 10px; font-weight: bold; border-radius: 3px; z-index: 1; }
         
+        /* PakWheels Offerings Section */
         .our-product-widget .well { background-color: #f7f7f7; border: 1px solid #e7e7e7; display: flex; align-items: center; padding: 20px; border-radius: 8px; text-decoration: none; color: #373737; }
         .our-product-widget .well:hover { box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
         .our-product-widget .well .img { width: 80px; margin-right: 20px; }
         .our-product-widget .well .img img { max-width: 100%; }
         .our-product-widget .well .desc h3 { font-size: 14px; font-weight: bold; margin: 0; }
         .our-product-widget .well .desc p { font-size: 20px; font-weight: 900; margin: 0; }
-        .rating .fa { color: #f8c202; }
-        .rating .fa.non-filled { color: #ccc; }
-
-        .video-box { display: block; margin-bottom: 20px; color: #373737; }
-        .video-box:hover { text-decoration: none; }
-        .video-box .pos-rel { position: relative; display: block; }
-        .video-box img { width: 100%; border-radius: 8px; }
-        .icon-play-video { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); background: rgba(0,0,0,0.5); color: white; width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 24px; }
-        .video-box-small .icon-play-video { width: 40px; height: 40px; font-size: 16px; }
-
-        .blog-enteries .row { margin-bottom: 20px; }
-        .blog-enteries .img-box { width: 75px; height: 75px; float: left; margin-right: 15px; }
-        .blog-enteries .img-box img { width: 100%; height: 100%; object-fit: cover; border-radius: 4px; }
-        .blog-enteries h3 { font-size: 16px; margin: 0 0 5px; }
-        .blog-enteries .date { color: #999; font-size: 12px; }
-        .blog-enteries .description { font-size: 14px; color: #555; }
         
-        .app-install-banner-wrapper { background-color: #eaf2ff; padding: 40px 0; }
-        .app-install-banner-wrapper h2 { color: #0d47a1; }
-        .qr-code-cont { display: flex; align-items: center; gap: 15px; }
-
+        /* Footer */
         .footer { background: #373737; color: #ccc; padding: 40px 0 20px; }
         .footer h5 { color: white; font-weight: bold; margin-bottom: 15px; }
         .footer-links li { margin-bottom: 8px; }
         .footer-links a { color: #ccc; text-decoration: none; }
         .footer-links a:hover { color: white; }
         .footer-social .networks a { color: white; font-size: 18px; margin-right: 15px; }
-        .footer .newsletter-subscription input { width: calc(100% - 100px); }
-        .footer .newsletter-subscription button { width: 90px; }
+        .footer .newsletter-subscription input { width: calc(100% - 90px) !important; display: inline-block !important; }
+        .footer .newsletter-subscription button { display: inline-block !important; }
 
-        /* Responsive Fixes */
+        /* Responsive */
         @media (max-width: 767px) {
-            .header-space { height: 52px; }
-            .navbar-brand img { height: 30px !important; margin: 10px 15px !important;}
-            .navbar-toggle { margin-top: 8px; margin-right: 15px; margin-bottom: 8px; }
-            .navbar-toggle .icon-bar { background-color: #888; }
+            .header-space { height: 50px; }
+            .navbar-header { float: none; }
+            .navbar-toggle { display: block; }
             #page-header, #page-header.scrolled { background-color: white; }
-            #page-header .logo-white { display: none; }
-            #page-header .logo-blue { display: block; }
             #page-header .mini-nav { display: none; }
+            #page-header .main-nav { padding: 0; }
+            .logo-white { display: none !important; } .logo-blue { display: block !important; }
+            .navbar-brand img { height: 35px; margin: 8px 0; }
+            .navbar-toggle .icon-bar { background-color: #888; }
             .navbar-collapse { background-color: #f8f8f8; }
-            .navbar-nav>li>a { color: #373737; }
-            .search-classified-bg { padding: 80px 0 60px; }
-            .search-classified-text h1 { font-size: 32px; }
-            .search-classified-text p { font-size: 16px; }
+            .navbar-nav>li>a { color: #333; }
+            .post-an-ads { display: none; }
             .search-front { flex-direction: column; gap: 10px; }
-            .search-front li { width: 100%; border-right: none; }
-            .range-widget { width: 100%; }
+            .search-front li, .search-front .home-autocomplete-field { border-right: none; width: 100%; }
+            #home-search-btn { width: 100%; }
             .home-widgets .col-md-6.line { border-right: none; }
             .home-widgets .col-md-6.line.or::after { display: none; }
-            .top_banner { width: 100%; height: auto; padding: 20px; min-height: 100px; }
+            .top_banner { width: 100%; height: auto; padding: 20px; }
             .browse-listing li { width: 50%; }
             .carousel-control { display: none; }
         }
     </style>
 </head>
 <body>
-    <header id="page-header">
+
+    <header class="header" id="page-header">
         <nav class="navbar navbar-default" style="background: transparent; border: none; margin-bottom: 0;">
             <div class="mini-nav">
                 <div class="container">
@@ -209,42 +188,17 @@
                     </div>
                     <div class="collapse navbar-collapse" id="navbar-collapse">
                         <ul class="nav navbar-nav navbar-right">
-                             <li class="dropdown">
+                            <li class="dropdown">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">Used Cars <i class="fa fa-caret-down"></i></a>
                                 <div class="dropdown-menu mega-navbar columns-4">
-                                   <div class="row">
-                                       <div class="col-sm-3">
-                                           <ul class="list-unstyled">
-                                               <li><a href="#"><i class="fa fa-search"></i><div><strong>Find Used Cars</strong><p>Search from over 110k options</p></div></a></li>
-                                               <li><a href="#"><i class="fa fa-star"></i><div><strong>Featured Cars</strong><p>View featured cars by PakWheels</p></div></a></li>
-                                           </ul>
-                                       </div>
-                                       <div class="col-sm-3">
-                                           <ul class="list-unstyled">
-                                                <li><a href="#"><i class="fa fa-check-square-o"></i><div><strong>Certified Cars</strong><p>PakWheels seal of approval</p></div></a></li>
-                                               <li><a href="#"><i class="fa fa-thumbs-o-up"></i><div><strong>Car Inspection</strong><p>Get your car inspected by experts</p></div></a></li>
-                                           </ul>
-                                       </div>
-                                       <div class="col-sm-3">
-                                           <ul class="list-unstyled">
-                                               <li><a href="#"><i class="fa fa-map-marker"></i><div><strong>Popular Cities</strong></div></a></li>
-                                               <li><a href="#"><p class="city-name">Karachi</p></a></li>
-                                               <li><a href="#"><p class="city-name">Lahore</p></a></li>
-                                           </ul>
-                                       </div>
-                                       <div class="col-sm-3">
-                                            <ul class="list-unstyled">
-                                                <li><a href="#"><i class="fa fa-car"></i><div><strong>Popular Models</strong></div></a></li>
-                                                <li><a href="#"><p class="city-name">Toyota Corolla</p></a></li>
-                                                <li><a href="#"><p class="city-name">Honda Civic</p></a></li>
-                                            </ul>
-                                       </div>
-                                   </div>
+                                   <!-- ... Mega menu content from previous example ... -->
                                 </div>
                             </li>
                             <li><a href="#">New Cars</a></li>
                             <li><a href="#">Bikes</a></li>
                             <li><a href="#">Auto Store</a></li>
+                            <li><a href="#">Videos</a></li>
+                            <li><a href="#">Blog</a></li>
                             <li class="post-an-ads"><a href="#">Post an Ad</a></li>
                         </ul>
                     </div>
@@ -252,8 +206,6 @@
             </div>
         </nav>
     </header>
-
-    <div class="header-space"></div>
 
     <main>
         <section class="search-classified-bg">
@@ -285,8 +237,9 @@
             <div class="btn-classified-container"><a class="btn-link-outline" href="#">Advanced Filter <i class="fa fa-angle-right"></i></a></div>
         </section>
 
-        <!-- === ALL SECTIONS BELOW HERO === -->
-        <section style="padding-top: 40px; background-color: #fff; border-bottom: 1px solid #e0e0e0;">
+        <!-- === CLONED CONTENT STARTS HERE === -->
+        
+        <section style="padding-top: 40px; background: #fff;">
             <div class="container">
                 <div class="home-widgets row">
                     <div class="col-md-12 home-widgets-title">
@@ -308,57 +261,235 @@
                             <li><i class="fa fa-tick"></i>We Bargain for you and share the Best Offer</li>
                             <li><i class="fa fa-tick"></i>We ensure Safe & Secure Transaction</li>
                         </ul>
-                        <a href="#" class="btn btn-secondary btn-lg">Register Your Car</a>
+<a href="#" class="btn btn-success btn-lg">Register Your Car</a>
                     </div>
-                </div>
-                <div class="main-google-ad-container">
-                    <div class="top_banner">ADVERTISEMENT 970x250</div>
                 </div>
             </div>
         </section>
 
         <section>
             <div class="container">
-                <h2>Browse Used Cars</h2>
+                <div class="main-google-ad-container">
+                    <div class="top_banner"><img src="https://tpc.googlesyndication.com/simgad/7621024500858374134"></div>
+                </div>
+
+                <div class="section-heading-container">
+                    <h2>Browse Used Cars</h2>
+                    <a href="#" class="more-link">View All Used Cars <i class="fa fa-angle-right"></i></a>
+                </div>
+
                 <div class="nav-tabs-main">
                     <ul class="nav nav-tabs" role="tablist">
-                        <li role="presentation" class="active"><a href="#browse_category" role="tab" data-toggle="tab">Category</a></li>
-                        <li role="presentation"><a href="#browse_city" role="tab" data-toggle="tab">City</a></li>
-                        <li role="presentation"><a href="#browse_make" role="tab" data-toggle="tab">Make</a></li>
+                        <li role="presentation" class="active"><a href="#browse_category" aria-controls="browse_category" role="tab" data-toggle="tab">Category</a></li>
+                        <li role="presentation"><a href="#browse_city" aria-controls="browse_city" role="tab" data-toggle="tab">City</a></li>
+                        <li role="presentation"><a href="#browse_make" aria-controls="browse_make" role="tab" data-toggle="tab">Make</a></li>
                     </ul>
                     <div class="tab-content" style="padding-top: 20px;">
                         <div role="tabpanel" class="tab-pane active" id="browse_category">
                             <div id="categoryCarousel" class="carousel slide" data-ride="carousel" data-interval="false">
                                 <div class="carousel-inner" role="listbox">
-                                    <div class="item active"><ul class="browse-listing"><li class="col-xs-6 col-sm-4 col-md-2"><a href="#"><img src="https://wsa3.pakwheels.com/assets/browse-more/car-ctg-automatic-a55403a87e9794f26240b3b89f81013ad5da5f46e9d180d4aa48fa6095852dce.svg" alt="Automatic">Automatic Cars</a></li><li class="col-xs-6 col-sm-4 col-md-2"><a href="#"><img src="https://wsa2.pakwheels.com/assets/browse-more/car-ctg-imported-3466fdc5035c8c30983d01b4d25cd7cb97ca9272b5cc31e9df096d0b4a8a380f.svg" alt="Imported">Imported Cars</a></li><li class="col-xs-6 col-sm-4 col-md-2"><a href="#"><img src="https://wsa4.pakwheels.com/assets/browse-more/car-ctg-jeep-8637eea1c1efdabe93fdb517751bf0a725efe4c2ad84084baa302d5d8208cd82.svg" alt="Jeep">Jeep</a></li><li class="col-xs-6 col-sm-4 col-md-2"><a href="#"><img src="https://wsa3.pakwheels.com/assets/browse-more/car-ctg-hybrid-351122bb727d7938d5f35ffb5dbb660ee6f6eb895b984c70d7d0cc9e74c1e93c.svg" alt="Hybrid">Hybrid Cars</a></li><li class="col-xs-6 col-sm-4 col-md-2"><a href="#"><img src="https://wsa1.pakwheels.com/assets/browse-more/car-ctg-1000cc-cars-4f09861499c5a24f39becd8e2baa667b3cea7d8116bdf951622f938b1186aa9e.svg" alt="1000cc">1000cc Cars</a></li><li class="col-xs-6 col-sm-4 col-md-2"><a href="#"><img src="https://wsa2.pakwheels.com/assets/browse-more/car-ctg-small-76d1a1d82cf4ce773dddced47e638ed7e59eb3d9a8362f59b12d137dbc799d3e.svg" alt="Small">Small Cars</a></li></ul></div>
-                                    <div class="item"><ul class="browse-listing"><li class="col-xs-6 col-sm-4 col-md-2"><a href="#"><img src="https://wsa2.pakwheels.com/assets/browse-more/car-ctg-japanese-3d68bdb7a647d85123324abc324fdf8e8892dc10d1d7859a614680b77b30d4dd.svg" alt="Japanese">Japanese Cars</a></li><li class="col-xs-6 col-sm-4 col-md-2"><a href="#"><img src="https://wsa3.pakwheels.com/assets/browse-more/car-ctg-diesel-ca6e2793c3fd974ed5deff95fb4851e776066b022724ccc27c613b4513871cc7.svg" alt="Diesel">Diesel Cars</a></li></ul></div>
+                                    <div class="item active">
+                                        <ul class="browse-listing">
+                                            <li class="col-xs-6 col-sm-4 col-md-2"><a href="#"><img src="https://wsa3.pakwheels.com/assets/browse-more/car-ctg-automatic-a55403a87e9794f26240b3b89f81013ad5da5f46e9d180d4aa48fa6095852dce.svg" alt="Automatic">Automatic Cars</a></li>
+                                            <li class="col-xs-6 col-sm-4 col-md-2"><a href="#"><img src="https://wsa2.pakwheels.com/assets/browse-more/car-ctg-imported-3466fdc5035c8c30983d01b4d25cd7cb97ca9272b5cc31e9df096d0b4a8a380f.svg" alt="Imported">Imported Cars</a></li>
+                                            <li class="col-xs-6 col-sm-4 col-md-2"><a href="#"><img src="https://wsa4.pakwheels.com/assets/browse-more/car-ctg-jeep-8637eea1c1efdabe93fdb517751bf0a725efe4c2ad84084baa302d5d8208cd82.svg" alt="Jeep">Jeep</a></li>
+                                            <li class="col-xs-6 col-sm-4 col-md-2"><a href="#"><img src="https://wsa3.pakwheels.com/assets/browse-more/car-ctg-hybrid-351122bb727d7938d5f35ffb5dbb660ee6f6eb895b984c70d7d0cc9e74c1e93c.svg" alt="Hybrid">Hybrid Cars</a></li>
+                                            <li class="col-xs-6 col-sm-4 col-md-2"><a href="#"><img src="https://wsa1.pakwheels.com/assets/browse-more/car-ctg-1000cc-cars-4f09861499c5a24f39becd8e2baa667b3cea7d8116bdf951622f938b1186aa9e.svg" alt="1000cc">1000cc Cars</a></li>
+                                            <li class="col-xs-6 col-sm-4 col-md-2"><a href="#"><img src="https://wsa2.pakwheels.com/assets/browse-more/car-ctg-small-76d1a1d82cf4ce773dddced47e638ed7e59eb3d9a8362f59b12d137dbc799d3e.svg" alt="Small">Small Cars</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="item">
+                                        <ul class="browse-listing">
+                                            <li class="col-xs-6 col-sm-4 col-md-2"><a href="#"><img src="https://wsa2.pakwheels.com/assets/car-ctg-japanese-3d68bdb7a647d85123324abc324fdf8e8892dc10d1d7859a614680b77b30d4dd.svg" alt="Japanese">Japanese Cars</a></li>
+                                            <li class="col-xs-6 col-sm-4 col-md-2"><a href="#"><img src="https://wsa3.pakwheels.com/assets/car-ctg-diesel-ca6e2793c3fd974ed5deff95fb4851e776066b022724ccc27c613b4513871cc7.svg" alt="Diesel">Diesel Cars</a></li>
+                                        </ul>
+                                    </div>
                                 </div>
                                 <a class="left carousel-control" href="#categoryCarousel" role="button" data-slide="prev"><i class="fa fa-chevron-left"></i></a>
                                 <a class="right carousel-control" href="#categoryCarousel" role="button" data-slide="next"><i class="fa fa-chevron-right"></i></a>
                             </div>
+                        </div>
+                        <div role="tabpanel" class="tab-pane" id="browse_city">
+                             <ul class="browse-listing browse-auto-link">
+                                <li class="col-xs-6 col-sm-4 col-md-2"><a href="#">Karachi</a></li>
+                                <li class="col-xs-6 col-sm-4 col-md-2"><a href="#">Lahore</a></li>
+                                <li class="col-xs-6 col-sm-4 col-md-2"><a href="#">Islamabad</a></li>
+                                <li class="col-xs-6 col-sm-4 col-md-2"><a href="#">Rawalpindi</a></li>
+                                <li class="col-xs-6 col-sm-4 col-md-2"><a href="#">Peshawar</a></li>
+                                <li class="col-xs-6 col-sm-4 col-md-2"><a href="#">Faisalabad</a></li>
+                            </ul>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- More sections and footer would follow -->
+        <section>
+            <div class="container">
+                <h2>PakWheels Offerings</h2>
+                <div class="row our-product-widget">
+                    <div class="col-md-6" style="margin-bottom: 20px;"><a class="well show" href="#"><div class="img"><img src="https://wsa4.pakwheels.com/assets/pw-sifm-logo-revamp-c64d4b2bc18e317bf786c0b77506cd3b836a0a9f5a98f5df8174a9e01066e71b.png"></div><div class="desc"><h3>PakWheels</h3><p>SELL IT FOR ME</p></div></a></div>
+                    <div class="col-md-6" style="margin-bottom: 20px;"><a class="well show" href="#"><div class="img"><img src="https://wsa1.pakwheels.com/assets/pw-auction-sheet-revamp-925ea98a37d632d0d35f98f899ce53b8a12999d1200e08b22ceb7065d98a1db2.png" style="margin: 12px 0;"></div><div class="desc"><h3>PakWheels</h3><p>AUCTION SHEET VERIFICATION</p></div></a></div>
+                    <div class="col-md-6" style="margin-bottom: 20px;"><a class="well show" href="#"><div class="img"><img src="https://wsa2.pakwheels.com/assets/pw-inspection-revamp-f9dad8be7156f0741992510b1aecbfd35772586d137d4f8e4a1bf117a8b8fb22.png"></div><div class="desc"><h3>PakWheels</h3><p>CAR INSPECTION</p></div></a></div>
+                    <div class="col-md-6" style="margin-bottom: 20px;"><a class="well show" href="#"><div class="img"><img src="https://wsa3.pakwheels.com/assets/pw-car-insurance-revamp-a76435af1d48b09a39ad41a2762f27b131b230d1f41d4f6f86adfbaad8336dc6.png"></div><div class="desc"><h3>PakWheels</h3><p>CAR INSURANCE</p></div></a></div>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div class="container">
+                <div class="section-heading-container">
+                     <h2>Managed by PakWheels</h2>
+                    <a href="#" class="more-link">View all managed by PakWheels cars <i class="fa fa-angle-right"></i></a>
+                </div>
+                <div id="managedCarousel" class="carousel slide" data-ride="carousel" data-interval="false">
+                    <div class="carousel-inner" role="listbox">
+                        <div class="item active">
+                            <div class="row">
+                                <div class="col-sm-3">
+                                    <div class="cards">
+                                        <div class="featured-ribbon">FEATURED</div>
+                                        <a href="#"><div class="img-box"><img src="https://cache1.pakwheels.com/ad_pictures/1241/Slide_honda-city-i-vtec-2-2015-124161155.webp"></div></a>
+                                        <div class="cards-content">
+                                            <h3><a href="#">Honda City 2015</a></h3>
+                                            <div class="generic-green">PKR 2,950,000</div>
+                                            <div class="generic-gray">Faisalabad</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-3">
+                                    <div class="cards">
+                                        <div class="featured-ribbon">FEATURED</div>
+                                        <a href="#"><div class="img-box"><img src="https://cache2.pakwheels.com/ad_pictures/1238/Slide_daihatsu-mira-g-sa-iii-2022-123839031.webp"></div></a>
+                                        <div class="cards-content">
+                                            <h3><a href="#">Daihatsu Mira 2022</a></h3>
+                                            <div class="generic-green">PKR 3,900,000</div>
+                                            <div class="generic-gray">Islamabad</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-3">
+                                    <div class="cards">
+                                        <div class="featured-ribbon">FEATURED</div>
+                                        <a href="#"><div class="img-box"><img src="https://cache2.pakwheels.com/ad_pictures/1221/Slide_honda-n-wgn-g-52-2017-122143371.webp"></div></a>
+                                        <div class="cards-content">
+                                            <h3><a href="#">Honda N Wgn 2017</a></h3>
+                                            <div class="generic-green">PKR 2,700,000</div>
+                                            <div class="generic-gray">Lahore</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-3">
+                                    <div class="cards">
+                                        <div class="featured-ribbon">FEATURED</div>
+                                        <a href="#"><div class="img-box"><img src="https://cache1.pakwheels.com/ad_pictures/1241/Slide_mercedes-benz-m-class-2002-124160768.webp"></div></a>
+                                        <div class="cards-content">
+                                            <h3><a href="#">Mercedes Benz M Class 2002</a></h3>
+                                            <div class="generic-green">PKR 4,200,000</div>
+                                            <div class="generic-gray">Lahore</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <a class="left carousel-control" href="#managedCarousel" role="button" data-slide="prev"><i class="fa fa-chevron-left"></i></a>
+                    <a class="right carousel-control" href="#managedCarousel" role="button" data-slide="next"><i class="fa fa-chevron-right"></i></a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-9">
+                        <div class="row">
+                            <div class="col-sm-3">
+                                <ul class="footer-links list-unstyled">
+                                    <li><h5>Cars By Make</h5></li>
+                                    <li><a href="#">Toyota Cars</a></li>
+                                    <li><a href="#">Suzuki Cars</a></li>
+                                    <li><a href="#">Honda Cars</a></li>
+                                </ul>
+                            </div>
+                            <div class="col-sm-3">
+                                <ul class="footer-links list-unstyled">
+                                    <li><h5>Cars By City</h5></li>
+                                    <li><a href="#">Cars in Karachi</a></li>
+                                    <li><a href="#">Cars in Lahore</a></li>
+                                    <li><a href="#">Cars in Islamabad</a></li>
+                                </ul>
+                            </div>
+                            <div class="col-sm-3">
+                                <ul class="footer-links list-unstyled">
+                                    <li><h5>Explore PakWheels</h5></li>
+                                    <li><a href="#">Used Cars</a></li>
+                                    <li><a href="#">New Cars</a></li>
+                                    <li><a href="#">Auto Parts</a></li>
+                                </ul>
+                            </div>
+                            <div class="col-sm-3">
+                                <ul class="footer-links list-unstyled">
+                                    <li><h5>PakWheels.com</h5></li>
+                                    <li><a href="#">About Us</a></li>
+                                    <li><a href="#">Contact Us</a></li>
+                                    <li><a href="#">Careers</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <h5>Subscribe to our Newsletter</h5>
+                        <form class="newsletter-subscription form-inline">
+                            <input type="email" class="form-control" placeholder="name@email.com">
+                            <button type="submit" class="btn btn-success">Subscribe</button>
+                        </form>
+                        <h5 style="margin-top: 20px;">Follow Us</h5>
+                        <div class="footer-social">
+                            <a href="#" class="networks"><i class="fa fa-facebook"></i></a>
+                            <a href="#" class="networks"><i class="fa fa-twitter"></i></a>
+                            <a href="#" class="networks"><i class="fa fa-instagram"></i></a>
+                            <a href="#" class="networks"><i class="fa fa-youtube"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <hr style="border-color: #555;">
+                <p class="text-center" style="font-size: 12px;">Copyright © 2003 - 2024 PakWheels (Pvt) Ltd. - All Rights Reserved.</p>
+            </div>
+        </footer>
+
     </main>
 
     <!-- Scripts -->
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-    
     <script>
         $(document).ready(function() {
+            // Sticky header
             $(window).scroll(function() {
-                if ($(this).scrollTop() > 10) { $('#page-header').addClass('scrolled'); } 
-                else { $('#page-header').removeClass('scrolled'); }
+                if ($(this).scrollTop() > $('.mini-nav').outerHeight()) {
+                    $('#page-header').addClass('scrolled');
+                } else {
+                    $('#page-header').removeClass('scrolled');
+                }
             });
-            $('#price-range-toggle').on('click', function(e) { e.stopPropagation(); $('.pr-range').slideToggle(200); });
-            $(document).on('click', function(e) { if (!$(e.target).closest('.range-widget').length) { $('.pr-range').slideUp(200); } });
+            
+            // Price range dropdown
+            $('#price-range-toggle').on('click', function(e) {
+                e.stopPropagation();
+                $('.pr-range').slideToggle(200);
+            });
+            $(document).on('click', function(e) {
+                if (!$(e.target).closest('.range-widget').length) { $('.pr-range').slideUp(200); }
+            });
             $('.pr-range').on('click', function(e){ e.stopPropagation(); });
-            $('.nav-tabs-main a').click(function (e) { e.preventDefault(); $(this).tab('show'); });
+
+            // Bootstrap tabs functionality
+            $('.nav-tabs-main a').click(function (e) {
+              e.preventDefault();
+              $(this).tab('show');
+            });
         });
     </script>
 </body>
